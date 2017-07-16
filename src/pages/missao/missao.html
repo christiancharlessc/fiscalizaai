@@ -18,124 +18,71 @@
       <ion-item color="danger">Sobre o Atendimento</ion-item>
     </ion-item-group>
     <ion-row>
-      <ion-col col-12>
-          <b>Quem receberá a verba</b><br>
-          NOME_CONVENENTE<br>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-6>
-        <b>Data Inicial</b><br>
-        <ion-icon name="calendar"></ion-icon> 23/11/2016
-      </ion-col>
-      <ion-col col-6>
-        <b>Data Encerramento</b><br>
-        <ion-icon name="calendar"></ion-icon> 23/11/2016
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-12>
-          <b>Título do Projeto</b><br>
-          (TIPO_ATENDIMENTO) Serviços-Manutenção-Manutenção e Conservação de Espaços Culturais
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-12>
-          <b>Objetivo do Projeto</b><br>
-          (OBJETIVO) Viabilizar a  manutenção e conservação de espaços culturais 2016/2017. Manter um bem tombado e em plena atividade, pois abriga a sua biblioteca de aproximadamente 40.000 volumes, aberta gratuitamente a pesquisadores e ao público interessado em literatura, aos turistas, estudantes em visitas guiadas ao Palacete Borges da Costa que também serve de escritório para sua diretoria e as reuniões dos acadêmicos.
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-12>
-          <b>Valor total do Projeto</b><br>
-          (Total_Gasto) R$ 150.000,00
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-6>
-        <b>Beneficiários</b><br>
-        (TP_PESSOA_BENEFICIADA) Cidadãos
-      </ion-col>
-      <ion-col col-6>
-        <b>Quantidade</b><br>
-        (QT_PESSOA_BENEFICIADA) 5.000
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-6>
-        <b>Beneficiários</b><br>
-        (TP_PESSOA_BENEFICIADA) Cidadãos
-      </ion-col>
-      <ion-col col-6>
-        <b>Quantidade</b><br>
-        {{QT_PESSOA_BENEFICIADA}} 5.000
-      </ion-col>
-    </ion-row>
-      <ion-item color="danger">Sua missão</ion-item>
-  </ion-grid>
-    <div [ngSwitch]="mission">
-    <ion-list *ngSwitchDefault>
-      <ion-card (click)="MissaoPage">
-        <ion-card-header>
-          <h2><b>Educação - R$ 20.000,00</b></h2>
-        </ion-card-header>
-        <ion-card-content>
-          <p>
-            Prefeitura Municipal de Santa Luzia<br>
-            <ion-row>
-              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
-              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
-            </ion-row><br>
-            <p>Recapeamento asfáltico de 2.417,60 m² em CBUQ e execução de 604,40 m de sarjeta Tipo 1 e de 604,40 m de meio fio de concreto pré moldado Tipo A, das Ruas Nicassia Rodrigues de Andrade e Marieta Honorato de Oliveira, Bairro Palmital.</p>
-        </ion-card-content>
-      </ion-card>
-    </ion-list>
+      <ion-list>
+          <h4>TÍTULO DO PROJETO</h4>
+          <p>Serviços-Manutenção-Manutenção e Conservação de Espaços Culturais</p>
+      </ion-list>
+      <ion-list>
+          <h4>QUEM RECEBERÁ A VERBA?</h4>
+          <p>Serviços-Manutenção-Manutenção e Conservação de Espaços Culturais</p>
+      </ion-list>
+      <ion-list col-6>
+          <h4>DATA INICIAL</h4>
+          <p>10/10/2010</p>
+      </ion-list>
+      <ion-list col-6>
+          <h4>DATA LIMITE</h4>
+          <p>10/10/2010</p>
+      </ion-list>
+      <ion-list col-12>
+          <h4>VALOR TOTAL DO PROJETO</h4>
+          <p>R$ 120.000,00</p>
+      </ion-list>
+      <ion-list col-12>
+          <h4>OBJETIVO DO PROJETO</h4>
+          <p>Viabilizar a  manutenção e conservação de espaços culturais 2016/2017. Manter um bem tombado e em plena atividade, pois abriga a sua biblioteca de aproximadamente 40.000 volumes, aberta gratuitamente a pesquisadores e ao público interessado em literatura, aos turistas, estudantes em visitas guiadas ao Palacete Borges da Costa que também serve de escritório para sua diretoria e as reuniões dos acadêmicos.</p>
+      </ion-list>
+      <ion-list col-6>
+          <h4>BENEFICIÁRIOS</h4>
+          <p>Cidadãos</p>
+      </ion-list>
+      <ion-list col-6>
+          <h4>QUANTIDADE</h4>
+          <p>5000</p>
+      </ion-list>
+      <ion-list col-6>
+          <h4>ENDEREÇO</h4>
+          <p>Endereço</p>
+      </ion-list>
+      <hr>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
+        <div [ngSwitch]="missionUnic">    
 
-    <ion-list *ngSwitchCase="'doing'">
-      <ion-card>
-        <ion-card-header>
-          <h2><b>Educação - R$ 20.000,00</b></h2>
-        </ion-card-header>
-        <ion-card-content>
-          <p>
-            Prefeitura Municipal de Belo Horizonte<br>
-            <ion-row>
-              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
-              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
-            </ion-row><br>
-            <p>Recapeamento asfáltico de 2.417,60 m² em CBUQ e execução de 604,40 m de sarjeta Tipo 1 e de 604,40 m de meio fio de concreto pré moldado Tipo A, das Ruas Nicassia Rodrigues de Andrade e Marieta Honorato de Oliveira, Bairro Palmital.</p>
-        </ion-card-content>
-      </ion-card>  
+    <ion-list *ngSwitchCase="'aceitar'">
+        <h4>Fiscalize esse Atendimento</h4>
+        <button ion-button block color="secondary">Realizado</button>
+        <button ion-button block color="default">Em Andamento</button>
+        <button ion-button block color="danger">Não Realizado</button>
     </ion-list>
-    <ion-list *ngSwitchCase="'done'">
-      <ion-card>
-        <ion-card-header>
-          <h2><b>Educação - R$ 20.000,00</b></h2>
-        </ion-card-header>
-        <ion-card-content>
-          <p>
-            Prefeitura Municipal de Lagoa Santa<br>
-            <ion-row>
-              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
-              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
-            </ion-row><br>
-            <p>Recapeamento asfáltico de 2.417,60 m² em CBUQ e execução de 604,40 m de sarjeta Tipo 1 e de 604,40 m de meio fio de concreto pré moldado Tipo A, das Ruas Nicassia Rodrigues de Andrade e Marieta Honorato de Oliveira, Bairro Palmital.</p>
-        </ion-card-content>
-      </ion-card>
+    <ion-list *ngSwitchCase="'rejeitar'">
+      <!-- Voltar -->
     </ion-list>
   </div>
+
+    </ion-col>
+  </ion-row>
+  </ion-grid>
 </ion-content>
 
 <ion-footer>
-<ion-segment [(ngModel)]="mission" >
-      <ion-segment-button value="todo">
-        Novas
+  <ion-segment [(ngModel)]="missionUnic" color="danger" >
+      <ion-segment-button value="aceitar">
+        Aceitar Missão
       </ion-segment-button>
-      <ion-segment-button value="doing">
-        Abertas
-      </ion-segment-button>
-      <ion-segment-button value="done">
-        Realizadas
+      <ion-segment-button value="rejeitar">
+        Rejeitar Missão
       </ion-segment-button>
     </ion-segment>
 </ion-footer>

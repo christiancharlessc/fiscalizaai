@@ -25,6 +25,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { icon:'checkmark-circle', title: 'Missões', component: MissoesPage },
+      { icon:'checkmark-circle', title: 'Missao', component: MissaoPage },
       { icon:'person', title: 'Perfil', component: PerfilPage },
       { icon:'search', title: 'Sobre', component: ListPage }
     ];

@@ -7,8 +7,8 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class GraficoPage {
   // Doughnut
-  public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
-  public doughnutChartData:number[] = [350, 450, 100];
+  public doughnutChartLabels:string[] = ['VR_CONCEDE_ATUAL', 'VR_EMEN_PARL_ATUAL', 'VR_INTERV_ATUAL', 'VR_CONTRA_ATUAL'];
+  public doughnutChartData:number[] = [350, 450, 100, 300];
   public doughnutChartType:string = 'doughnut';
  
   // events

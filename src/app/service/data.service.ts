@@ -12,13 +12,14 @@ private serviceUrl: String = 'http://localhost:3000/api';
 
     getAgenda(data: any){
          return this.http
-        .post('http://localhost:3000/api/agenda/getbydate',data)
+        .post('http://fiscalizaai.azurewebsites.net/Help/Api/POST-api-FinalizaAi',data)
         .map((res:Response)=> res.json());
     }
 
     getAgendas(){
+        console.log("entrei servico");
         return this.http
-        .get('http://localhost:3000/api/agenda')
+        .get('http://fiscalizaai.azurewebsites.net/Help/Api/POST-api-FinalizaAi')
         .map((res:Response)=> res.json());
     }
 }

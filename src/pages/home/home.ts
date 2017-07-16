@@ -17,11 +17,10 @@ export class HomePage {
 
   }
     ngOnInit() {
-       this.dataService.getAgendas().subscribe(result=>{       
-          console.log(result);
+        // console.log(this.localizacao.GetGeolocalizacao());
+       this.dataService.getAgendas().subscribe(result=>{           
           this.atendimentos = result;
-          console.log(result);
-          console.log(this.localizacao.GetGeolocalizacao());
+          console.log(result);        
        },
        error=>{
           console.log(error);

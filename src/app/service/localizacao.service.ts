@@ -10,10 +10,9 @@ import { Injectable } from '@angular/core';
 
   constructor(private geolocation: Geolocation) {}
   
-  GetGeolocalizacao(){
-    
-    return  this.geolocation.getCurrentPosition().then((resp) => {
-      
+  GetGeolocalizacao(){    
+     this.geolocation.getCurrentPosition().then((resp) => {
+       console.log("entrei");        
     }).catch((error) => {
       console.log('Error getting location', error);
     });

@@ -7,13 +7,69 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-card>
-    <ion-card-header>
-      Header
-    </ion-card-header>
-    <ion-card-content>
-      The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-    </ion-card-content>
-  </ion-card>
+<ion-content>
+    <ion-segment [(ngModel)]="mission" >
+      <ion-segment-button value="todo">
+        A Fazer
+      </ion-segment-button>
+      <ion-segment-button value="doing">
+        Fazendo
+      </ion-segment-button>
+      <ion-segment-button value="done">
+        Feita
+      </ion-segment-button>
+    </ion-segment>
+
+  <div [ngSwitch]="mission">
+    <ion-list *ngSwitchDefault>
+      <ion-card>
+        <ion-card-header>
+          <h2><b>Educação - R$ 20.000,00</b></h2>
+        </ion-card-header>
+        <ion-card-content>
+          <p>
+            Prefeitura Municipal de Santa Luzia<br>
+            <ion-row>
+              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
+              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
+            </ion-row><br>
+            <p>Recapeamento asfáltico de 2.417,60 m² em CBUQ e execução de 604,40 m de sarjeta Tipo 1 e de 604,40 m de meio fio de concreto pré moldado Tipo A, das Ruas Nicassia Rodrigues de Andrade e Marieta Honorato de Oliveira, Bairro Palmital.</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'doing'">
+      <ion-card>
+        <ion-card-header>
+          <h2><b>Educação - R$ 20.000,00</b></h2>
+        </ion-card-header>
+        <ion-card-content>
+          <p>
+            Prefeitura Municipal de Belo Horizonte<br>
+            <ion-row>
+              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
+              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
+            </ion-row><br>
+            <p>Recapeamento asfáltico de 2.417,60 m² em CBUQ e execução de 604,40 m de sarjeta Tipo 1 e de 604,40 m de meio fio de concreto pré moldado Tipo A, das Ruas Nicassia Rodrigues de Andrade e Marieta Honorato de Oliveira, Bairro Palmital.</p>
+        </ion-card-content>
+      </ion-card>  
+    </ion-list>
+    <ion-list *ngSwitchCase="'done'">
+      <ion-card>
+        <ion-card-header>
+          <h2><b>Educação - R$ 20.000,00</b></h2>
+        </ion-card-header>
+        <ion-card-content>
+          <p>
+            Prefeitura Municipal de Lagoa Santa<br>
+            <ion-row>
+              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
+              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
+            </ion-row><br>
+            <p>Recapeamento asfáltico de 2.417,60 m² em CBUQ e execução de 604,40 m de sarjeta Tipo 1 e de 604,40 m de meio fio de concreto pré moldado Tipo A, das Ruas Nicassia Rodrigues de Andrade e Marieta Honorato de Oliveira, Bairro Palmital.</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
 </ion-content>
+

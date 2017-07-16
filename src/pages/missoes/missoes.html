@@ -6,70 +6,86 @@
     <ion-title>Missões</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content>
-    <ion-segment [(ngModel)]="mission" color="danger" >
-      <ion-segment-button value="todo">
-        Novas
-      </ion-segment-button>
-      <ion-segment-button value="doing">
-        Abertas
-      </ion-segment-button>
-      <ion-segment-button value="done">
-        Realizadas
-      </ion-segment-button>
-    </ion-segment>
+
+
+  <ion-segment [(ngModel)]="mission" color="danger">
+    <ion-segment-button value="todo">
+      Novas
+    </ion-segment-button>
+    <ion-segment-button value="doing">
+      Abertas
+    </ion-segment-button>
+    <ion-segment-button value="done">
+      Realizadas
+    </ion-segment-button>
+  </ion-segment>
+
 
   <div [ngSwitch]="mission">
     <ion-list *ngSwitchDefault>
-      <ion-card (click)="MissaoPage">
-        <ion-card-header>
-          <h2><b>Educação - R$ 20.000,00</b></h2>
-        </ion-card-header>
-        <ion-card-content>
-          <p>
-            Prefeitura Municipal de Santa Luzia<br>
-            <ion-row>
-              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
-              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
-            </ion-row><br>
-            <p>Recapeamento asfáltico de 2.417,60 m² em CBUQ e execução de 604,40 m de sarjeta Tipo 1 e de 604,40 m de meio fio de concreto pré moldado Tipo A, das Ruas Nicassia Rodrigues de Andrade e Marieta Honorato de Oliveira, Bairro Palmital.</p>
-        </ion-card-content>
-      </ion-card>
+      <div>
+        <div *ngFor="let p of atendimentos">
+          <ion-card (click)="openPage(p)" *ngIf="p.STATUS==1">
+            <ion-card-header>
+              <h2><b>{{p.NOME_ORGAO}} - R${{p.PRECO_TOTAL}}</b></h2>
+            </ion-card-header>
+            <ion-card-content>
+              <p>
+                {{p.NOME_CONVENENTE}}<br>
+                <ion-row>
+                  <ion-col>
+                    <ion-icon name="calendar"></ion-icon> {{p.DT_VIGENCIA_INICIAL}}</ion-col>
+                  <ion-col>
+                    <ion-icon name="calendar"></ion-icon>{{p.DT_VIGENCIA_ATUAL}}</ion-col>
+                </ion-row><br>
+                <p>{{p.NOMES_TIPOS_ATENDIMENTOS}}</p>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </div>
     </ion-list>
 
     <ion-list *ngSwitchCase="'doing'">
-      <ion-card>
-        <ion-card-header>
-          <h2><b>Educação - R$ 20.000,00</b></h2>
-        </ion-card-header>
-        <ion-card-content>
-          <p>
-            Prefeitura Municipal de Belo Horizonte<br>
-            <ion-row>
-              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
-              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
-            </ion-row><br>
-            <p>Recapeamento asfáltico de 2.417,60 m² em CBUQ e execução de 604,40 m de sarjeta Tipo 1 e de 604,40 m de meio fio de concreto pré moldado Tipo A, das Ruas Nicassia Rodrigues de Andrade e Marieta Honorato de Oliveira, Bairro Palmital.</p>
-        </ion-card-content>
-      </ion-card>  
+      <div *ngFor="let p of atendimentos">
+        <ion-card (click)="openPage(p)" *ngIf="p.STATUS==2">
+          <ion-card-header>
+            <h2><b>{{p.NOME_ORGAO}} - R${{p.PRECO_TOTAL}}</b></h2>
+          </ion-card-header>
+          <ion-card-content>
+            <p>
+              {{p.NOME_CONVENENTE}}<br>
+              <ion-row>
+                <ion-col>
+                  <ion-icon name="calendar"></ion-icon> {{p.DT_VIGENCIA_INICIAL}}</ion-col>
+                <ion-col>
+                  <ion-icon name="calendar"></ion-icon>{{p.DT_VIGENCIA_ATUAL}}</ion-col>
+              </ion-row><br>
+              <p>{{p.NOMES_TIPOS_ATENDIMENTOS}}</p>
+          </ion-card-content>
+
+        </ion-card>
+      </div>
     </ion-list>
     <ion-list *ngSwitchCase="'done'">
-      <ion-card>
-        <ion-card-header>
-          <h2><b>Educação - R$ 20.000,00</b></h2>
-        </ion-card-header>
-        <ion-card-content>
-          <p>
-            Prefeitura Municipal de Lagoa Santa<br>
-            <ion-row>
-              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
-              <ion-col><ion-icon name="calendar"></ion-icon> 23/11/2016</ion-col>
-            </ion-row><br>
-            <p>Recapeamento asfáltico de 2.417,60 m² em CBUQ e execução de 604,40 m de sarjeta Tipo 1 e de 604,40 m de meio fio de concreto pré moldado Tipo A, das Ruas Nicassia Rodrigues de Andrade e Marieta Honorato de Oliveira, Bairro Palmital.</p>
-        </ion-card-content>
-      </ion-card>
+      <div *ngFor="let p of atendimentos">
+        <ion-card (click)="openPage(p)" *ngIf="p.STATUS==3">
+          <ion-card-header>
+            <h2><b>{{p.NOME_ORGAO}} - R${{p.PRECO_TOTAL}}</b></h2>
+          </ion-card-header>
+          <ion-card-content>
+            <p>
+              {{p.NOME_CONVENENTE}}<br>
+              <ion-row>
+                <ion-col>
+                  <ion-icon name="calendar"></ion-icon> {{p.DT_VIGENCIA_INICIAL}}</ion-col>
+                <ion-col>
+                  <ion-icon name="calendar"></ion-icon>{{p.DT_VIGENCIA_ATUAL}}</ion-col>
+              </ion-row><br>
+              <p>{{p.NOMES_TIPOS_ATENDIMENTOS}}</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
     </ion-list>
   </div>
 </ion-content>
-

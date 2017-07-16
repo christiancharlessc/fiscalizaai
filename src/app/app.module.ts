@@ -1,12 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-<<<<<<< HEAD
 import { HttpModule } from '@angular/http';
-=======
 import { LocalizacaoService } from './service/localizacao.service';
 import { Geolocation } from '@ionic-native/geolocation';
->>>>>>> bbedfa8312efc375fcc22d3b3a3634a1c354a27d
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -37,12 +34,9 @@ import { DataService } from './service/data.service';
   providers: [
     StatusBar,
     SplashScreen,
-<<<<<<< HEAD
     DataService,
-=======
     LocalizacaoService,
     Geolocation,
->>>>>>> bbedfa8312efc375fcc22d3b3a3634a1c354a27d
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

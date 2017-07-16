@@ -12,7 +12,7 @@ import { Injectable } from '@angular/core';
   
   GetGeolocalizacao(){
     
-     this.geolocation.getCurrentPosition().then((resp) => {
+    return  this.geolocation.getCurrentPosition().then((resp) => {
       
     }).catch((error) => {
       console.log('Error getting location', error);

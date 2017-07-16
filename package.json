@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "name": "FiscalizaAi",
     "version": "0.0.1",
     "author": "Ionic Framework",
@@ -45,8 +44,7 @@
         "plugins": {
             "cordova-plugin-geolocation": {}
         }
-    }
-=======
+    },
   "name": "FiscalizaAi",
   "version": "0.0.1",
   "author": "Ionic Framework",
@@ -87,5 +85,4 @@
     "typescript": "2.3.4"
   },
   "description": "An Ionic project"
->>>>>>> 8ef2f5898ca528c88fdbf22ba828fd0db6425096
 }

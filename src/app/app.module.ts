@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MissoesPage } from '../pages/missoes/missoes';
 import { MissaoPage } from '../pages/missao/missao';
+import { PerfilPage } from '../pages/perfil/perfil';
 import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -21,6 +22,7 @@ import { DataService } from './service/data.service';
     HomePage,
     MissoesPage,
     MissaoPage,
+    PerfilPage,
     ListPage
   ],
   imports: [
@@ -34,6 +36,7 @@ import { DataService } from './service/data.service';
     HomePage,
     MissoesPage,
     MissaoPage,
+    PerfilPage,
     ListPage
   ],
   providers: [

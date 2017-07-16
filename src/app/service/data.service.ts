@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Injectable} from '@angular/core';
 import { Http, Response } from "@angular/http";
 import 'rxjs/add/operator/map';
@@ -23,3 +24,5 @@ private serviceUrl: String = 'http://localhost:3000/api';
         .map((res:Response)=> res.json());
     }
 }
+=======
+>>>>>>> bbedfa8312efc375fcc22d3b3a3634a1c354a27d
